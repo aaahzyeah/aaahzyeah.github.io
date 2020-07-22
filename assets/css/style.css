@@ -20,9 +20,10 @@ ul, ul li,  ul li a{
     left:0px;
 }
 /*侧栏标题*/
-#sidebar h5 {
-	color: #353535;
-	font-weight: 700;
+#sidebar h3 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: black;
 }
 #sidebar ul li {
     position: relative;
@@ -40,7 +41,7 @@ ul.sidebar-menu {
 
 ul.sidebar-menu li{
     /*line-height: 20px !important;*/
-    margin-bottom: 0px;
+    margin-bottom: 5px;
     margin-left:10px;
     margin-right:10px;
 }
@@ -53,8 +54,9 @@ ul.sidebar-menu li a{
     color: #aeb2b7;
     text-decoration: none;
     display: block;
-    padding: 0px 0 0px 10px;
-    font-size: 12px;
+    padding: 0px 0px 0px 10px;
+    font-size: 13px;
+    font-family: "Montserrat";
     outline: none;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -80,7 +82,7 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 
 .wrapper {
     display: inline-block;
-    margin-top: 60px;
+    margin-top: 0px;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
