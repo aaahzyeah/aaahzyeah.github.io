@@ -1,0 +1,91 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+/*整体背景白色*/
+body{
+    background: #fff;
+}
+
+ul, ul li,  ul li a{
+    text-decoration: none!important;
+}
+
+/*侧栏导航的尺寸和位置*/
+#sidebar {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background: #fff;
+    left:0px;
+}
+/*侧栏标题*/
+#sidebar h3 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    color: black;
+}
+#sidebar ul li {
+    position: relative;
+    list-style: none;
+}
+
+.nav-collapse.collapse {
+    display: inline;
+}
+
+ul.sidebar-menu {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+ul.sidebar-menu li{
+    /*line-height: 20px !important;*/
+    margin-bottom: 5px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+ul.sidebar-menu li a span{
+    display: block;
+}
+/*侧栏的菜单*/
+ul.sidebar-menu li a{
+    color: #aeb2b7;
+    text-decoration: none;
+    display: block;
+    padding: 0px 0px 0px 10px;
+    font-size: 13px;
+    font-family: "Montserrat";
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+    color: #424a5d;
+    display: block;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+/* MAIN CONTENT CONFIGURATION */
+#main-content {
+    margin-left: 280px;
+}
+
+.wrapper {
+    display: inline-block;
+    margin-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-top: 0px;
+    width: 100%;
+}
