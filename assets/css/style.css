@@ -5,6 +5,7 @@
 /*整体背景白色*/
 body{
     background: #fff;
+    font-family: "Montserrat";
 }
 
 ul, ul li,  ul li a{
@@ -12,7 +13,7 @@ ul, ul li,  ul li a{
 }
 
 /*侧栏导航的尺寸和位置*/
-#sidebar {
+.sidebar {
     width: 250px;
     height: 100%;
     position: fixed;
@@ -20,12 +21,12 @@ ul, ul li,  ul li a{
     left:0px;
 }
 /*侧栏标题*/
-#sidebar h3 {
-    font-family: "Montserrat";
+.sidebar h3 {
+    /*font-family: "Montserrat";*/
     font-weight: 700;
     color: black;
 }
-#sidebar ul li {
+.sidebar ul li {
     position: relative;
     list-style: none;
 }
@@ -76,16 +77,76 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 }
 
 /* MAIN CONTENT CONFIGURATION */
-#main-content {
-    margin-left: 280px;
+.main-content {
+    margin-left: 300px;
 }
 
-.wrapper {
+.portfolio-grid{
     display: inline-block;
     margin-top: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
     padding-top: 0px;
     width: 100%;
 }
+
+#portfolio-sidebar{
+    width: 900px !important;
+    padding-right: 0px;
+  }
+  
+  li.grid-item{
+    width:400px; /*360*/
+    position:relative;
+    float:left;
+    padding:0px;
+    list-style: none;
+  }
+  
+  .grid-hover{
+    position: absolute;
+    width:400px;
+    height: 100%;
+    top:0;
+    background: white;
+    z-index: 2;
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in;
+      -moz-transition: all 0.2s ease-in;
+      -ms-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in; 
+  }
+  
+  .grid-hover:hover{
+    opacity: 0.7;
+  }
+  
+  .grid-hover h1{
+    font-size:23px;
+    bottom:80px;
+    left:40px;
+    position:absolute;
+    text-transform:uppercase;
+    color:#000000;
+    letter-spacing:1px;
+    font-weight:700;
+    line-height:50px;
+  }
+  
+  .grid-hover p{
+    font-size:13px;
+    bottom:40px;
+    left:40px;
+    right: 40px;
+    position:absolute;
+    color:#222222;
+    letter-spacing:1px;
+    font-weight:400;
+    line-height:16px;
+  }
+  
+  li.grid-item img{
+    width:400px;
+  }
