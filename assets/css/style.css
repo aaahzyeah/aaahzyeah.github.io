@@ -98,17 +98,21 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
   }
   
   li.grid-item{
-    width:400px; /*360*/
+    width:280px; /*360*/
     position:relative;
     float:left;
     padding:0px;
     list-style: none;
     margin: 5px;
   }
+
+  li.grid-item img{
+    width:280px;
+  }
   
   .grid-hover{
     position: absolute;
-    width:400px;
+    width:280px;
     height: 100%;
     top:0;
     background: white;
@@ -122,13 +126,13 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
   }
   
   .grid-hover:hover{
-    opacity: 0.7;
+    opacity: 0.9;
   }
   
   .grid-hover h1{
-    font-size:23px;
+    font-size:18px;
     bottom:80px;
-    left:40px;
+    left:20px;
     position:absolute;
     text-transform:uppercase;
     color:#000000;
@@ -139,16 +143,12 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
   
   .grid-hover p{
     font-size:13px;
-    bottom:40px;
-    left:40px;
-    right: 40px;
+    bottom:20px;
+    left:20px;
+    right: 20px;
     position:absolute;
-    color:#222222;
+    color: #424a5d;
     letter-spacing:1px;
     font-weight:400;
     line-height:16px;
-  }
-  
-  li.grid-item img{
-    width:400px;
   }
