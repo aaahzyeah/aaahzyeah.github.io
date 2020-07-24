@@ -79,6 +79,7 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 /* MAIN CONTENT CONFIGURATION */
 .main-content {
     margin-left: 300px;
+    margin-top: 5px;
 }
 
 .portfolio-grid{
@@ -102,6 +103,7 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
     float:left;
     padding:0px;
     list-style: none;
+    margin: 5px;
   }
   
   .grid-hover{
