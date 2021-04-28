@@ -14,7 +14,7 @@ ul, ul li,  ul li a{
 
 /*侧栏导航的尺寸和位置*/
 .sidebar {
-    width: 250px;
+    width: 400px;
     height: 100%;
     position: fixed;
     background: #fff;
