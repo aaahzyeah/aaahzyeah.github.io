@@ -1,0 +1,630 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>About Me</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="e14d989e-ec71-454e-b7a2-35065a3d7185" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👁️‍🗨️</span></div><h1 class="page-title">About Me</h1></header><div class="page-body"><div id="28a878ac-73ee-4e35-b724-3b9f5057acd8" class="column-list"><div id="2bf7f020-ece1-45b0-b745-64c1adfd105b" style="width:50%" class="column"><figure id="d4b8de07-b5ae-4582-ae35-a74cdf13d0e6" class="image"><a href="assets/img/portrait.png"><img style="width:1896px" src="assets/img/portrait.png""/></a></figure></div><div id="522712d0-a255-40a7-bd33-c15ae704fa7d" style="width:50%" class="column"><h2 id="e9abf987-4786-4b3a-9fcb-88003f2c60f5" class=""><strong>An innovative designer and researcher who bridges user and technology.</strong></h2><p id="207d249c-ebe6-441c-84a9-4acbe36d1ee3" class=""><mark class="highlight-orange"><strong>Currently open to opportunities!</strong></mark></p><p id="a2c48d9b-f34d-4ae6-8e9d-058b213ad29d" class=""><mark class="highlight-orange">h.ye@student.tue.nl</mark></p></div></div><p id="6a713fa4-0222-4a51-8713-f044bb1eb435" class="">I was born and raised in Zhejiang, China, currently based in Eindhoven, NL.</p><p id="f840db93-fd6c-483f-8080-c23a50d26359" class="">My expertise spans the domain of Human-Computer-Interaction, Wearables, User-Centered-Design, Product and Service Design, etc. I am going to graduate from TU Eindhoven in Aug.2021, and seeking working or research opportunities for my future development.</p><p id="6a05566f-172b-4ba0-8821-5c297ee5a1e8" class="">In my leisure time, I love sports, traveling, and exploring exhibitions.</p><h1 id="9e24b9f7-2aec-47c6-a327-ad30dfae947e" class="">Experience</h1><div id="fb1c59c9-6e39-4741-a259-bf72f38d0ae5" class="column-list"><div id="9db17c25-0618-49bc-9730-a4c8a7925892" style="width:75%" class="column"><h2 id="34f613ff-0d87-4898-a5d7-fb56aa6a07fa" class=""><strong>Research Assistant Intern  </strong></h2></div><div id="6a4bd87e-6ab3-4082-b815-bac858a77f23" style="width:25.000000000000007%" class="column"><p id="9f7f605c-353f-4a2d-95b3-2c8f83247ace" class=""><strong>07.2020 - 10.2020</strong></p></div></div><p id="ed7972c8-5e45-4cf1-81da-660cbcd6fae4" class=""><strong>Center of Digital Innovation, Tongji University</strong></p><p id="140d2759-e703-4d0d-89ff-c36bf4478a09" class="">Desk research and literature review for the cardiopulmonary rehabilitation project. </p><p id="cc3b7053-8e28-4f83-be24-23b77981bff4" class="">Literature review and paper writing about thermal-augmented smart textile.</p><div id="db22dcaf-7bdc-44d9-b5f7-33788874cf97" class="column-list"><div id="c6f2f2cd-de7c-4fd5-8022-3be2d4da8e15" style="width:75%" class="column"><h2 id="9b7de6db-c457-4161-8976-992648133626" class=""><strong>Product Design Intern  </strong></h2></div><div id="05469926-8599-4d30-8fc3-a3feefb51649" style="width:25%" class="column"><p id="4f06acd5-127e-4452-b102-92547134fcc7" class=""><strong>09.2018 - 01.2019</strong></p></div></div><p id="0f5dd8a3-f6aa-42a5-b58a-9bca5b2ed8b6" class=""><strong>Hangzhou Warmplus Technology Co., Ltd.</strong></p><p id="b2038d0f-5c4e-45ac-8608-42cee146cb5f" class="">Product design and development of ultrasound-extraction-based essential oil machine. </p><p id="571c6845-a6d4-4730-8d80-270ae30b874f" class="">My work includes product definition, 3D modeling and rendering, prototyping.</p><div id="46f8fe16-53e2-43ed-afc0-a9ee44a01f9d" class="column-list"><div id="e12adf87-ab36-4f69-80a8-c42bd357be9d" style="width:75%" class="column"><h2 id="ab59864d-812c-48db-b3c0-f5ce9f8c9c31" class=""><strong>Product Design Intern </strong></h2></div><div id="29974ee0-5949-4e3a-92d2-96676a56682c" style="width:25%" class="column"><p id="531257ff-5c4c-4fab-9122-31630e3396a8" class=""><strong>07.2018 -08.2018</strong></p></div></div><p id="abb0e58a-ef9a-4080-8283-b198d8db3ae6" class=""><strong>Robotics and Automation Research Lab, SUTD</strong></p><p id="18e101d8-9d7c-424b-a8c3-17c0070ab577" class="">Designed shape-shifting robot products, focused on user experience and product structure. </p><p id="7bd2e5e9-8c0f-407f-955a-01a1b94738a9" class="">Both schemes were adopted for commercial presentations.</p><h1 id="816e823a-1fbf-480b-a55b-b66d65a3a316" class="">Education</h1><div id="d9a236fa-701a-4958-8f9c-79f95014c618" class="column-list"><div id="4324974c-7af8-40e5-976c-c9b01a2dd953" style="width:81.25%" class="column"><h2 id="69e4059d-2e30-45e9-80be-af4fb7eb69bd" class=""><strong>M.Sc Industrial Design </strong></h2><p id="ef35e796-9922-4671-9e92-bc020e694c68" class=""><strong>Eindhoven University of Technology (TU/e)</strong></p><p id="13291a2c-d528-4f29-94b3-ee528845905a" class=""><mark class="highlight-orange">The 3+2 Excellence Program for Industrial Design of TU/e-ZJU</mark></p></div><div id="03d06b89-7607-474c-8e22-582a8564ccf6" style="width:18.75%" class="column"><p id="1870ecac-7ab9-49ef-8977-18cf567d90c3" class=""><strong>2019-2021</strong></p></div></div><div id="f0cc2f8b-610a-4dce-ab54-77d308f58aba" class="column-list"><div id="52f47f53-293a-49fd-a53c-4644b55f1c79" style="width:81.25%" class="column"><h2 id="d7221fd5-e80c-4697-8b8d-92aeccad1568" class=""><strong>B.E Industrial Design </strong></h2><p id="dbef4174-420e-4161-9ad0-44f8269d18d0" class=""><strong>Zhejiang University (ZJU)</strong></p></div><div id="3a00ffbd-f68d-4db3-9bac-777095d0fb83" style="width:18.750000000000007%" class="column"><p id="d6f15007-9e6e-451c-8286-689ff801572a" class=""><strong>2016-2020</strong></p></div></div><p id="7e4dcf9a-5863-4a2e-b713-40bc43a3cc50" class="block-color-orange">Rank Top 5%
+Zhejiang Province Honor Graduate, Zhejiang Province Government Scholarship, Academic Excellence Award for 3 years</p><h1 id="a00b323e-62ba-4227-a4d0-222a3d78c63b" class="">Events</h1><h3 id="ce71a08b-74fd-4509-9fb2-5c8816386d5b" class=""><strong>Publication on TEI&#x27;21</strong></h3><p id="905ccad1-a65c-4096-8881-1fb61de303c1" class="">Ye, H., Guo, Z., &amp; Liang, R. H. (2021, February). Asynchronous Co-Dining: Enhancing the Intimacy in Remote Co-Dining Experience Through Audio Recordings. In Proceedings of the Fifteenth International Conference on Tangible, Embedded, and Embodied Interaction (doi: 10.1145/3430524.3442468)</p><h3 id="f6c734b7-24d2-4bbb-ba45-be54344c179d" class=""><strong>Publication on Design4Health</strong></h3><p id="c5d32d9b-24d3-4ba6-ba09-8e457647de4d" class="">van der Linden, S., Ye, H., Huang, S., Markopoulos, P., Hoens, W., &amp; de Lange, T. (2020). KNEEHAB: A SYSTEM FOR SELF-MONITORING KNEE OVERSTRETCHING. Editors: Kirsty Christer, Claire Craig &amp; Paul Chamberlain, 43.</p><h3 id="b7d23486-6d85-4aee-ac91-472f7343ac8a" class=""><strong>Exhibition on </strong><mark class="highlight-orange"><strong><a href="https://www.gloweindhoven.nl/en/glow-2020/connecting-you/overview-showcases/magpie-s-bridge">GLOW Festival 2020</a></strong></mark></h3><figure id="4d2551e5-2670-4507-9b31-527bb830eea4" class="image"><a href="assets/img/heying.jpg"><img style="width:4200px" src="assets/img/heying.jpg"/></a></figure><h1 id="95481f68-7076-4880-9305-e5242165f20a" class="">Social Media</h1><div id="5ed012db-6d0f-4f24-8d83-4247a875cb0a" class="column-list"><div id="bec31121-045b-4020-80af-daee1132dd75" style="width:33.333333333333336%" class="column"><p id="7a7741ec-170c-4654-98b8-ef4310c850b1" class="block-color-blue_background"><a href="https://www.linkedin.com/in/huizhong-ye-9533a9197/">LinkedIn</a></p><p id="d972b435-c049-4b42-9d32-9a2bdbbb389f" class="">
+</p></div><div id="571b3777-0675-4ae0-b223-62e1d34ea266" style="width:33.333333333333336%" class="column"><p id="5e01f78b-8d8e-455f-b48f-6b2206f5cbca" class="block-color-pink_background"><a href="https://www.instagram.com/aaahzyeah/">Instagram</a></p><p id="00144c87-fbcc-4c18-9921-d110d599eca7" class="">
+</p></div><div id="edab8c55-2b31-47e2-86a7-60a7dfc96188" style="width:33.33333333333333%" class="column"><p id="c1b20275-677e-4ad9-b80c-a0ecc3193b70" class="block-color-red_background"><a href="https://www.youtube.com/channel/UCxPzcXV16Ob9EjcuImKJrEg">Youtube</a></p></div></div></div></article></body></html>
