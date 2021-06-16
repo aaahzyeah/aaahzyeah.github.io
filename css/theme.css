@@ -3895,10 +3895,10 @@ body.h_m_9{
     margin-top: 50px;
 }
 .sb_details > h4{
-    font-size: 18px;
+    font-size: 15px;
     color: #232931;
-    line-height: 50px;
-    margin-bottom: 16px;
+    line-height: 0px;
+    /* margin-bottom: 16px; */
     margin-top: 16px;
 }
 .sb_details p{
