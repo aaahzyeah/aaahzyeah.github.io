@@ -3198,6 +3198,9 @@ body.h_m_9{
     margin: 0 0 21px;
     color: #2b2b2b;
 }
+.sf_details p span{
+    font-weight: 600;
+}
 .sf_meta{
     position: relative;
     margin: 62px 0 0;
